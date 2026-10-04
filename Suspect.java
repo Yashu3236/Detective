@@ -11,7 +11,11 @@ public class Suspect {
         this.location = location;
         this.alibi = alibi;
     }
-
+    static Suspect[] suspects = {
+            new Suspect(101, "Ravi", "Bangalore", "At home"),
+            new Suspect(102, "Priya", "Mysore", "At work"),
+            new Suspect(103, "Kiran", "Tumkur", "At college")
+        };
     void displaySuspect() {
         System.out.println("ID: " + suspectId);
         System.out.println("Name: " + name);
@@ -30,13 +34,6 @@ public class Suspect {
 
     // Main method
     public static void main(String[] args) {
-
-        Suspect[] suspects = {
-            new Suspect(101, "Ravi", "Bangalore", "At home"),
-            new Suspect(102, "Priya", "Mysore", "At work"),
-            new Suspect(103, "Kiran", "Tumkur", "At college")
-        };
-
-        displayAllSuspects(suspects);
+        displayAllSuspects(Suspect.suspects);
     }
 }

@@ -1,9 +1,9 @@
 public class ClueManager{
   String[] clues = {
     "The Office Door was opened at 2:15 PM. ",
-    "CCTV shoes someone entering the office."
-    "A torn piece of paper was found near the printer."
-    "A suspect's ID card was found inside the office."
+    "CCTV shows someone entering the office.",
+    "A torn piece of paper was found near the printer.",
+    "A suspect's ID card was found inside the office.",
     "The printer was used shortly before the questions paper disappeared."
     };
   boolean[] collected = new boolean[5];
@@ -11,7 +11,7 @@ public class ClueManager{
     System.out.println("Available Clues:");
     for(int i =0; i < clues.length ; i++) {
       if (!collected[i]) {
-        System.out.println(i + 1) + " " + clues[i]);
+        System.out.println((i + 1) + " " + clues[i]);
       }
     }
   }
@@ -22,7 +22,7 @@ public class ClueManager{
     }
     int index = clueNumber - 1;
     if(collected[index]){
-      Sustem.out.println("This clue has already been collected.");
+      System.out.println("This clue has already been collected.");
     }
     else{
       collected[index] = true;
@@ -40,7 +40,7 @@ public class ClueManager{
       }
     }
     if (!found){
-      System.out.println("No clues have been collecteed yet.");
+      System.out.println("No clues have been collected yet.");
     }
   }
 }
