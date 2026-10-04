@@ -1,39 +1,52 @@
-public class Suspect {
+class Suspect {
 
     int suspectId;
     String name;
     String location;
-    String alibi;
 
-    Suspect(int suspectId, String name, String location, String alibi) {
+    // Constructor
+    Suspect(int suspectId, String name, String location) {
         this.suspectId = suspectId;
         this.name = name;
         this.location = location;
-        this.alibi = alibi;
     }
+<<<<<<< HEAD
     static Suspect[] suspects = {
             new Suspect(101, "Ravi", "Bangalore", "At home"),
             new Suspect(102, "Priya", "Mysore", "At work"),
             new Suspect(103, "Kiran", "Tumkur", "At college")
         };
+=======
+
+    // Display suspect details
+>>>>>>> 2840c30d183c81cc673f8eb9cf0e050b31c38f10
     void displaySuspect() {
-        System.out.println("ID: " + suspectId);
+        System.out.println("Suspect ID: " + suspectId);
         System.out.println("Name: " + name);
         System.out.println("Location: " + location);
-        System.out.println("Alibi: " + alibi);
-        System.out.println("----------------------");
+        System.out.println();
     }
 
+    // Display all suspects
     static void displayAllSuspects(Suspect[] suspects) {
-        System.out.println("===== ALL SUSPECTS =====");
-
-        for (Suspect s : suspects) {
-            s.displaySuspect();
+        for (Suspect suspect : suspects) {
+            suspect.displaySuspect();
         }
     }
 
     // Main method
     public static void main(String[] args) {
+<<<<<<< HEAD
         displayAllSuspects(Suspect.suspects);
+=======
+
+        Suspect[] suspects = {
+            new Suspect(101, "Ravi", "Bangalore"),
+            new Suspect(102, "Priya", "Mysore"),
+            new Suspect(103, "Kiran", "Tumkur")
+        };
+
+        displayAllSuspects(suspects);
+>>>>>>> 2840c30d183c81cc673f8eb9cf0e050b31c38f10
     }
 }
