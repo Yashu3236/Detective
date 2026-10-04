@@ -1,6 +1,6 @@
 public class ClueManager{
   String[] clues = {
-    "The Office Door was opened at 2:15. ",
+    "The Office Door was opened at 2:15 PM. ",
     "CCTV shoes someone entering the office."
     "A torn piece of paper was found near the printer."
     "A suspect's ID card was found inside the office."
@@ -16,7 +16,7 @@ public class ClueManager{
     }
   }
   public void collectClue(int clueNumber){
-    if(clueNumber < 1 || clueNumber < 5){
+    if(clueNumber < 1 || clueNumber > 5){
       System.out.println("Invaild clue number");
       return; 
     }
