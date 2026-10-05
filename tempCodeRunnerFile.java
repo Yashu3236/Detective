@@ -1,4 +1,4 @@
-public class Suspect{
+public class Suspect {
     int suspectId;
     String name;
     String location;
